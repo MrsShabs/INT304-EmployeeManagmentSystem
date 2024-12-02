@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react';
 import EmployeeForm from './Component/EmployeeForm.js';
+import EmployeeList from './Component/EmployeeList.js';
 import './App.css';
 
 
@@ -16,7 +17,6 @@ componentDidMount() {
   this.setState({ employees: savedEmployees });
 }
 
-
 saveData = () => {
   localStorage.setItem('employees', JSON.stringify(this.state.employees));
   };
@@ -32,18 +32,13 @@ addEmployee = (employee) => {
 
 render() {
   return (
+    <>
     <div className="EmployeeForm">
       <EmployeeForm addEmployee={this.addEmployee} />
-      <h2>Employee List</h2>
-            <ul>
-          {this.state.employees.map((emp, index) => (
-            <li key={index}>
-              {emp.name} - {emp.email} - {emp.title} - {emp.department}
-            </li>
-          ))}
-            </ul>
-    </div>
-  );
+      <EmployeeList employees={this.state.employees}/>
+      </div>
+    </>
+  )
 }
 }
 export default App;

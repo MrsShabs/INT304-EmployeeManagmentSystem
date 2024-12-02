@@ -7,7 +7,6 @@ class EmployeeForm extends Component{
       this.state = {name:'', email: '', title:'', department:''};
       }
     
-  
 // methods for handling input and form submission
 handleSubmit= (e)=>{
     e.preventDefault();

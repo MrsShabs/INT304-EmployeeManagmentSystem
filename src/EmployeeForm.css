@@ -18,7 +18,8 @@
 }
 #name{
   margin-right: 3px;
-  }
+}
+
 #lbltitle{
 margin-left: 5px;
 }
@@ -37,7 +38,7 @@ margin-right: 50px;
   cursor: pointer;
 }
 
-.employee-list {
+.EmployeeList {
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -45,22 +46,25 @@ margin-right: 50px;
   align-items: center;
 }
 
-.employee-list h1 {
+.EmployeeList h1 {
   font-size: 24px;
   margin-bottom: 16px;
+  color: #333;
 }
 
-.employee-list ul {
+.EmployeeList ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  color: #2c8ee9;
+  font-family: 'Georgia, 'Times New Roman', Times, serif';
 }
 
-.employee-list li {
+.EmployeeList li {
   margin-bottom: 8px;
 }
 
-.employee-list li a {
+.EmployeeList li a {
   color: #007bff;
   text-decoration: none;
 }
