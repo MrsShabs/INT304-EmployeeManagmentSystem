@@ -16,16 +16,27 @@
   border-radius: 0.25rem;
   border: 1px solid #ccc;
 }
-#name{
+#fname{
   margin-right: 3px;
 }
-
-#lbltitle{
-margin-left: 5px;
+#lname{
+  margin-right: 3px;
 }
-  
+#phone{
+  margin-right: -27px;
+}
+#address{
+  margin-right: -15px;
+}
+#email{
+  margin-right: -36px;
+}
+#lbltitle{
+margin-left: 40px;
+}
+
 #department{
-margin-right: 50px;
+margin-right: 14px;
 }
 
 
@@ -48,6 +59,7 @@ margin-right: 50px;
 
 .EmployeeList h1 {
   font-size: 24px;
+  font-weight: bold;
   margin-bottom: 16px;
   color: #333;
 }
@@ -56,7 +68,7 @@ margin-right: 50px;
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #2c8ee9;
+  color: #007bff;
   font-family: 'Georgia, 'Times New Roman', Times, serif';
 }
 
@@ -69,33 +81,33 @@ margin-right: 50px;
   text-decoration: none;
 }
 
-.employee-detail {
+.EmployeeDetail {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.employee-detail label {
+.EmployeeDetail label {
   font-weight: bold;
 }
 
-.employee-detail table {
+.EmployeeDetail table {
   border-collapse: collapse;
   width: 100%;
   max-width: 600px;
 }
 
-.employee-detail td, .employee-detail th {
+.EmployeeDetail td, .EmployeeDetail th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-.employee-detail tr:nth-child(even){background-color: #f2f2f2;}
+.EmployeeDetail tr:nth-child(even){background-color: #f2f2f2;}
 
-.employee-detail tr:hover {background-color: #ddd;}
+.EmployeeDetail tr:hover {background-color: #ddd;}
 
-.employee-detail th {
+.EmployeeDetail th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;

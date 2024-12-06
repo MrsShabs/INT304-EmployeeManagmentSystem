@@ -4,7 +4,7 @@ import '../EmployeeForm.css';
 class EmployeeForm extends Component{
     constructor(props) {
       super(props); 
-      this.state = {name:'', email: '', title:'', department:''};
+      this.state = {fname:'', lname:'', phone:'', address:'', email: '', title:'', department:''};
       }
     
 // methods for handling input and form submission
@@ -13,7 +13,7 @@ handleSubmit= (e)=>{
     console.log(this.state);
     this.props.addEmployee(this.state);
     this.setState({
-        name:'', email: '', title:'', department:''
+        fname:'', lname:'', phone:'', address:'', email: '', title:'', department:''
     });
 };
 
@@ -28,10 +28,22 @@ render(){
     return (
     <div>
         <form className="EmployeeForm" onSubmit={this.handleSubmit}>
-            <h1>Add Employee</h1>
+            <h1>New Employee</h1>
             <div>
-                <label htmlFor="name"> Name: </label>
-                <input type= "text" name= "name" id= "name" onChange={this.handleChange}/>
+                <label htmlFor="fname"> First Name: </label>
+                <input type= "text" name= "fname" id= "fname" onChange={this.handleChange}/>
+            </div>
+            <div>
+                <label htmlFor="lname"> Last Name: </label>
+                <input type= "text" name= "lname" id= "lname" onChange={this.handleChange}/>
+            </div>
+            <div>
+                <label htmlFor="phone"> Phone: </label>
+                <input type= "text" name= "phone" id= "phone" onChange={this.handleChange}/>
+            </div>
+            <div>
+                <label htmlFor="address"> Address: </label>
+                <input type= "text" name= "address" id= "address" onChange={this.handleChange}/>
             </div>
             <div>
                 <label htmlFor="email"> Email: </label>

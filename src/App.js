@@ -1,6 +1,7 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import EmployeeForm from './Component/EmployeeForm.js';
 import EmployeeList from './Component/EmployeeList.js';
+import EmployeeDetail from './Component/EmployeeDetail.js';
 import './App.css';
 
 
@@ -24,7 +25,8 @@ saveData = () => {
 addEmployee = (employee) => {
   this.setState(
     (prevState) => ({
-      employees: [...prevState.employees, employee]
+      employees: [...prevState.employees, employee].sort((a,b) =>
+        a.fname.localeCompare(b.fname))
     }),
     this.saveData
   );
@@ -36,9 +38,10 @@ render() {
     <div className="EmployeeForm">
       <EmployeeForm addEmployee={this.addEmployee} />
       <EmployeeList employees={this.state.employees}/>
+      <EmployeeDetail employees={this.state.employees}/>
       </div>
     </>
-  )
-}
+  );
+};
 }
 export default App;

@@ -8,7 +8,7 @@ function EmployeeList(props) {
             <ul>
             {props.employees.map((employee, index) => (
             <li key={index}>
-              {employee.name} - {employee.email} - {employee.title} - {employee.department}
+              {employee.fname} - {employee.lname} - {employee.title} - {employee.department}
             </li>
                 ))}
             </ul>
