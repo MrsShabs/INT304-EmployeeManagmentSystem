@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react';
+import React, { Component } from 'react';
 import '../EmployeeForm.css';
 
 class EmployeeForm extends Component{
@@ -23,43 +23,55 @@ handleChange= (e)=>{
         [name]: value
     });
 };
- 
+
 render(){
     return (
     <div>
+        <h1>New Employee</h1>
         <form className="EmployeeForm" onSubmit={this.handleSubmit}>
-            <h1>New Employee</h1>
-            <div>
-                <label htmlFor="fname"> First Name: </label>
-                <input type= "text" name= "fname" id= "fname" onChange={this.handleChange}/>
+            <div className="container-flexlible">
+            <div className="form-row">
+                <div className="form-group col-md-6">
+                    <label htmlFor="fname"> First Name: </label>
+                    <input type="text" className="form-control" id="fname" name ="fname" placeholder="First name" onChange={this.handleChange} />    
+                </div>
+                <div className="form-group col-md-6">
+                    <label htmlFor="lname"> Last Name: </label>
+                    <input type="text" className="form-control" id="lname" name ="lname"placeholder="Last name" onChange={this.handleChange} />
+                </div>
             </div>
-            <div>
-                <label htmlFor="lname"> Last Name: </label>
-                <input type= "text" name= "lname" id= "lname" onChange={this.handleChange}/>
-            </div>
-            <div>
-                <label htmlFor="phone"> Phone: </label>
-                <input type= "text" name= "phone" id= "phone" onChange={this.handleChange}/>
-            </div>
-            <div>
+            <div className="form-row">
                 <label htmlFor="address"> Address: </label>
-                <input type= "text" name= "address" id= "address" onChange={this.handleChange}/>
+                <input type="text" className="form-control" id="address" name ="address"placeholder="Address" onChange={this.handleChange} />
             </div>
-            <div>
+            <div className="form-row">
+            <div className="form-group col-md-6">
+                <label htmlFor="phone"> Phone: </label>
+                <input type="text" className="form-control" id="phone" name ="phone"placeholder="Phone" onChange={this.handleChange} />    
+            </div>
+            <div className="form-group col-md-6">
                 <label htmlFor="email"> Email: </label>
-                <input type= "text" name= "email" id= "email" onChange={this.handleChange}/>
+                <input type="text" className="form-control" id="email" name ="email" placeholder="Email" onChange={this.handleChange} />
             </div>
-            <div>
-                <label htmlFor="title" id="lbltitle"> Title: </label>
-                <input type= "text" name= "title" id= "title" onChange={this.handleChange}/>
             </div>
-            <div>
+            <div className="form-row">
+            <div className="form-group col-md-6">
+                <label htmlFor="title"> Title: </label>
+                <input type="text" className="form-control" id="title" name ="title" placeholder="Title" onChange={this.handleChange} />    
+            </div>
+            <div className="form-group col-md-6">
                 <label htmlFor="department"> Department: </label>
-                <input type= "text" name= "department" id= "department" onChange={this.handleChange}/>
+                <input type="text" className="form-control" id="department" name ="department" placeholder="Department" onChange={this.handleChange} />
             </div>
-            <button type= "submit">Add</button>
+            </div>
+            <div className="row"> 
+                <div className="col-4">
+                <button type="submit" className="btn btn-primary"> Add </button> 
+                </div>
+            </div>
+            </div>          
         </form>
-        </div>
+    </div>
     );
 
  }

@@ -1,44 +1,25 @@
 .EmployeeForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1rem;
+  /*background-color: aqua;*/
+  /*align-items: center;*/
 }
 .EmployeeForm h1{
   font-family: 'Georgia, 'Times New Roman', Times, serif';
+  font-weight: bold;
+  color:#333
 }
 .EmployeeForm label {
   margin-bottom: 0.5rem;
 }
 
 .EmployeeForm input {
-  padding: 0.5rem;
+  padding: 1rem;
   margin-bottom: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   border: 1px solid #ccc;
 }
-#fname{
-  margin-right: 3px;
-}
-#lname{
-  margin-right: 3px;
-}
-#phone{
-  margin-right: -27px;
-}
-#address{
-  margin-right: -15px;
-}
-#email{
-  margin-right: -36px;
-}
-#lbltitle{
-margin-left: 40px;
-}
-
-#department{
-margin-right: 14px;
-}
-
 
 .EmployeeForm button {
   padding: 0.5rem 1rem;
@@ -47,6 +28,7 @@ margin-right: 14px;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
+
 }
 
 .EmployeeList {
@@ -58,7 +40,7 @@ margin-right: 14px;
 }
 
 .EmployeeList h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 16px;
   color: #333;
@@ -70,6 +52,7 @@ margin-right: 14px;
   margin: 0;
   color: #007bff;
   font-family: 'Georgia, 'Times New Roman', Times, serif';
+  
 }
 
 .EmployeeList li {
@@ -79,6 +62,7 @@ margin-right: 14px;
 .EmployeeList li a {
   color: #007bff;
   text-decoration: none;
+  font-size: 24px;
 }
 
 .EmployeeDetail {
@@ -87,7 +71,9 @@ margin-right: 14px;
   justify-content: center;
   align-items: center;
 }
-
+h1 {
+  text-align: center;
+}
 .EmployeeDetail label {
   font-weight: bold;
 }
